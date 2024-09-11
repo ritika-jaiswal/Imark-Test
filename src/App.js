@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Login from './components/Login';
-import GraphManagement from './components/GraphManagement';
 import GraphListing from './components/GraphListing';
 import GraphDetails from './components/GraphDetails';
 import GraphForm from './components/GraphForm';
