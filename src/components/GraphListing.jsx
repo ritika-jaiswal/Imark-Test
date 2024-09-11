@@ -24,6 +24,7 @@ const GraphListing = () => {
   }, []);
 
   useEffect(() => {
+    const localChartsRef = chartsRef.current;
     graphData.forEach((graph) => {
       const canvas = document.getElementById(`graph-canvas-${graph.id}`);
       if (canvas) {
@@ -48,8 +49,8 @@ const GraphListing = () => {
     });
 
     return () => {
-      Object.keys(chartsRef.current).forEach((chartId) => {
-        chartsRef.current[chartId].destroy();
+      Object.keys(localChartsRef).forEach((chartId) => {
+        localChartsRef[chartId].destroy();
       });
     };
   }, [graphData]); 
